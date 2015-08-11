@@ -1,0 +1,29 @@
+AS1
+Horizontal Wave  2
+Hammer           3          
+Forward Punch    5
+High Throw       6
+Hand Clap        10
+Bend             13
+Tennis Serve     18
+Pickup Throw     20
+
+AS2
+High Wave        1
+Hand Catch       4
+Draw X           7
+Draw Tick        8
+Drwa Cicle       9
+Hands Wave       11
+Forward Kick     14
+Side Boxing      12
+
+AS3
+High Throw       6
+Forward Kick     14
+Side Kick        15
+Jogging          16
+Tennis Swing     17
+Tennis Serve     18
+Golf Swing       19
+Pickup Throw     20
