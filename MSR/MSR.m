@@ -4,6 +4,8 @@ function MSR()
 
 	load('data/list_train_data');
 	[train_label, train_data] = ReadData(list_train_data);
+	% Version 0.01: Normalize the data!!(using mean and std)
+	% train_data = Normalize(train_data);
 	save('data/train_data');
 	%load('data/train_data');
 	model = svmtrain(train_label, train_data, '-b 1');
@@ -15,6 +17,8 @@ function MSR()
 	result = zeros(testCase, 1);
 	for action = 1 : testCase
 		[test_label, test_data] = ReadData(list_test_data(action, :));
+		% Version 0.01: Normalize the data!!(using mean and std)
+		% test_data = Normalize(test_data);
 		[~, ~, decision] = svmpredict(test_label, test_data, model, '-b 1');
 		[~, pre_label] = max(sum(decision));
 		prediction(action) = pre_label;
@@ -29,4 +33,4 @@ function MSR()
 	save('data/result', 'result');
 end
 
-% MSR accuracy is: 50.183150%
+% MSR accuracy is: 53.479853%

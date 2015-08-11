@@ -22,6 +22,7 @@ function [label, data] = ReadData(list_data)
 		numOfFrames = numOfPoints / skeletonJoints;
 		tmp_data = reshape(tmp_data, 4,  numOfPoints);
 		tmp_data = reshape(tmp_data(1:3, :), lengthPerFrame, numOfFrames);
+		tmp_data = MoveOrigin(tmp_data);
 		data = [data; tmp_data'];
 		label = [label; ones(numOfFrames, 1) * list_data(i, 1)];
         fclose(fid);
